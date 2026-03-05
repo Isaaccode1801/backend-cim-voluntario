@@ -26,12 +26,13 @@ public class PacientesApplication {
             p.setDataNascimento(LocalDate.of(1985, 5, 20)); // Ano, Mês, Dia
             p.setGenero("Masculino");
             p.setContato("99999-1111");
+            p.setCpf("000.000.000-00");
             p.setQueixaPrincipal("Dor de cabeça constante há 3 dias.");
             p.setObservacao("Paciente chegou ansioso para a primeira consulta.");
 
             // 2. Pedimos ao nosso Bibliotecário para o guardar no banco de dados
             repository.save(p);
-            
+
             System.out.println("✅ Paciente de teste (João) salvo com sucesso no Banco de Dados!");
         };
     }

@@ -18,6 +18,7 @@ public class Paciente {
     private LocalDate dataNascimento;
     private String genero;
     private String contato;
+    private String cpf;
     private String idade;
     private String endereco;
 
@@ -122,6 +123,14 @@ public class Paciente {
 
     public void setContato(String contato) {
         this.contato = contato;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getAntecedentesPessoais() {
