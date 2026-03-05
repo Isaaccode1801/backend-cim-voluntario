@@ -15,9 +15,15 @@ public class TokenAuthFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
+        // Injeta os cabeçalhos de CORS manualmente para garantir
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        res.setHeader("Access-Control-Allow-Headers", "*");
+        res.setHeader("Access-Control-Max-Age", "3600");
+
         // Permite que o navegador verifique o CORS sem ser bloqueado (OPTIONS)
         if ("OPTIONS".equalsIgnoreCase(req.getMethod())) {
-            chain.doFilter(request, response);
+            res.setStatus(HttpServletResponse.SC_OK);
             return;
         }
 
