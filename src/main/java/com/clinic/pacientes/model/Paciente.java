@@ -17,6 +17,8 @@ public class Paciente {
     private String nome;
     private LocalDate dataNascimento;
     private String genero;
+    private LocalDate dataConsulta;
+    private String especialidade;
     private String contato;
     private String cpf;
     private String idade;
@@ -115,6 +117,22 @@ public class Paciente {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public LocalDate getDataConsulta() {
+        return dataConsulta;
+    }
+
+    public void setDataConsulta(LocalDate dataConsulta) {
+        this.dataConsulta = dataConsulta;
+    }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
     }
 
     public String getContato() {
